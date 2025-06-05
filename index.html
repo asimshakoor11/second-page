@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KAS PROS Service Terms</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        background-color: #ffffff;
+        color: #4a4a4a;
+        line-height: 1.6;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #003366 0%, #002244 100%);
+        color: #ffffff;
+        padding: 4rem 1rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.05)"/></svg>');
+        opacity: 0.1;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      .container-buttons {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: #e60000;
+        border-radius: 2px;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .btn {
+        background-color: #e60000;
+        color: white;
+        padding: 1rem 2rem;
+        margin: 0.5rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: 0.5s;
+      }
+
+      .btn:hover::before {
+        left: 100%;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        background-color: #cc0000;
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        color: #002244;
+        border: 2px solid #002244;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .btn-outline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #003366;
+        transition: all 0.3s ease;
+        z-index: -1;
+      }
+
+      .btn-outline:hover {
+        color: #ffffff;
+      }
+
+      .btn-outline:hover::before {
+        width: 100%;
+      }
+
+      .features {
+        background-color: #f1f1f1;
+        padding: 4rem 0;
+        text-align: center;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .feature-item {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .feature-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-item span {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      .feature-item h4 {
+        font-family: "Montserrat", sans-serif;
+        color: #003366;
+        margin-bottom: 0.5rem;
+      }
+
+      .cta-section {
+        text-align: center;
+        padding: 4rem 1rem;
+        background-color: #ffffff;
+      }
+
+      @media (max-width: 768px) {
+        .title {
+          font-size: 2rem;
+        }
+
+        .subtitle {
+          font-size: 1.1rem;
+        }
+
+        .btn {
+          width: 100%;
+          margin: 0.5rem 0;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="container">
+        <h1 class="title">KAS PROS Service Terms</h1>
+        <p class="subtitle">
+          Everything you need to know about how we price, protect, and deliver
+          our services – all in one place.
+        </p>
+        <a href="#" class="btn">Read Full Terms</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features-grid">
+        <div class="feature-item">
+          <span>💰</span>
+          <h4>Promo Pricing</h4>
+          <p>Special rates for our valued customers</p>
+        </div>
+        <div class="feature-item">
+          <span>🚫</span>
+          <h4>What's Not Included</h4>
+          <p>Clear transparency on service scope</p>
+        </div>
+        <div class="feature-item">
+          <span>⚡</span>
+          <h4>Same-Day Service</h4>
+          <p>Priority handling for urgent needs</p>
+        </div>
+        <div class="feature-item">
+          <span>🛡️</span>
+          <h4>Community Fridays</h4>
+          <p>Special services for our community</p>
+        </div>
+        <div class="feature-item">
+          <span>✅</span>
+          <h4>Warranty</h4>
+          <p>Guaranteed quality and satisfaction</p>
+        </div>
+        <div class="feature-item">
+          <span>📅</span>
+          <h4>Rescheduling</h4>
+          <p>Flexible appointment management</p>
+        </div>
+        <div class="feature-item">
+          <span>🚫</span>
+          <h4>Refusals</h4>
+          <p>Clear policy on service limitations</p>
+        </div>
+        <div class="feature-item">
+          <span>💳</span>
+          <h4>Payments</h4>
+          <p>Secure and convenient options</p>
+        </div>
+        <div class="feature-item">
+          <span>🔄</span>
+          <h4>Cancellations</h4>
+          <p>Fair and transparent policy</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container-buttons">
+        <a href="#" class="btn-outline">View Terms & Conditions (PDF)</a>
+        <a href="#" class="btn">Read Online (HTML)</a>
+      </div>
+    </section>
+  </body>
+</html>
