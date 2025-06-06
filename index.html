@@ -22,73 +22,50 @@
         line-height: 1.6;
       }
 
-      .hero {
-        background: linear-gradient(135deg, #003366 0%, #002244 100%);
-        color: #ffffff;
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
         padding: 2rem 1rem;
         text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1rem 1rem;
-      }
-
-      .container-buttons {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0rem 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
       }
 
       .title {
         font-family: "Montserrat", sans-serif;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         font-weight: 700;
-        margin-bottom: 1rem;
+        color: #003366;
         position: relative;
         display: inline-block;
+        transition: transform 0.3s ease;
       }
 
-      .title::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
-        background-color: #e60000;
-        border-radius: 2px;
+      .title:hover {
+        transform: translateY(-2px);
       }
 
       .subtitle {
-        font-size: 1.2rem;
-        margin: 1rem 0;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+      }
+
+      .subtitle:hover {
+        opacity: 1;
       }
 
       .btn {
-        background-color: #e60000;
+        background-color: #003366;
         color: white;
-        padding: 1rem 2rem;
-        margin: 0.5rem;
+        padding: 0.8rem 1.5rem;
         border: none;
-        border-radius: 8px;
-        font-size: 1.1rem;
-        font-weight: 600;
+        border-radius: 6px;
+        font-size: 1rem;
         cursor: pointer;
         text-decoration: none;
         display: inline-block;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         position: relative;
         overflow: hidden;
       }
@@ -115,17 +92,18 @@
 
       .btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        background-color: #cc0000;
+        box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2);
+        background-color: #002244;
       }
 
       .btn-outline {
         background-color: transparent;
-        color: #002244;
-        border: 2px solid #002244;
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        font-size: 1.1rem;
+        color: #003366;
+        border: 2px solid #003366;
+        padding: 0.6rem 1.5rem;
+        margin: 0rem;
+        border-radius: 6px;
+        font-size: 1rem;
         font-weight: 600;
         cursor: pointer;
         text-decoration: none;
@@ -150,6 +128,8 @@
 
       .btn-outline:hover {
         color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2);
       }
 
       .btn-outline:hover::before {
@@ -157,155 +137,182 @@
       }
 
       .features {
+        text-align: left;
+        margin: 1rem 0;
         background-color: #f1f1f1;
-        padding: 3rem 0;
-        text-align: center;
-      }
-
-      .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-      }
-
-      .feature-item {
-        background: #ffffff;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        padding: 1.5rem;
+        border-radius: 8px;
         transition: transform 0.3s ease;
       }
 
+      .features:hover {
+        transform: translateY(-2px);
+        box-shadow: none;
+      }
+
+      .features h3 {
+        text-align: center;
+        color: #003366;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .features h3::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #e60000;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .features:hover h3::after {
+        transform: scaleX(1);
+      }
+
+      .feature-item {
+        font-size: 1rem;
+        padding: 0rem 0;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
       .feature-item:hover {
-        transform: translateY(-5px);
+        background-color: none;
+        padding-left: 10px;
       }
 
       .feature-item span {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        display: block;
+        margin-right: 10px;
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
       }
 
-      .feature-item h4 {
-        font-family: "Montserrat", sans-serif;
-        color: #003366;
-        margin-bottom: 0.5rem;
+      .feature-item:hover span {
+        transform: scale(1.2);
       }
 
-      .cta-section {
-        text-align: center;
-        padding: 1rem 1rem;
-        background-color: #ffffff;
+      .button-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
       }
 
-      @media (max-width: 1024px) {
-        .features-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
-
-        }
+      .button-group a {
+        height: fit;
       }
-      @media (max-width: 768px) {
+
+      @media (max-width: 600px) {
         .title {
-          font-size: 2rem;
+          font-size: 1.4rem;
         }
 
         .subtitle {
-          font-size: 1.1rem;
+          font-size: 0.95rem;
         }
 
-        .btn {
+        .btn,
+        .btn-outline {
           width: 100%;
-          margin: 0.5rem 0;
+          margin: 0rem 0;
+          padding: 0.4rem;
         }
 
-        .container-buttons {
-          display: flex;
+        .button-group {
           flex-direction: column;
-          align-items: center;
-          justify-content: center;
+          gap: 0.5rem;
         }
 
-        .container-buttons a {
-          width: 100%;
+        .feature-item {
+          font-size: 0.95rem;
         }
-      }
-      @media (max-width: 540px) {
-        .features-grid {
-          grid-template-columns: 1fr;
+
+        .features {
+          margin: 0.5rem 0;
+          background-color: transparent;
+          padding: 0;
+        }
+
+        .features:hover {
+          transform: translateY(1px);
+          box-shadow: none;
+        }
+
+        .features h3 {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .features h3::after {
+          background-color: transparent;
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+
+        .features:hover h3::after {
+          transform: scaleX(1);
         }
       }
     </style>
   </head>
   <body>
-    <section class="hero">
-      <div class="container">
-        <h1 class="title">KAS PROS Service Terms</h1>
-        <p class="subtitle">
-          Everything you need to know about how we price, protect, and deliver
-          our services – all in one place.
-        </p>
-        <a href="#" class="btn">Read Full Terms</a>
+    <div class="container">
+      <div class="title">
+        📄 KAS PROS Service Pricing, Warranty, Promotions & Installation Terms
       </div>
-    </section>
+      <div class="subtitle">
+        Everything you need to know about how we price, protect, and deliver our
+        services – all in one place.
+      </div>
+      <a
+        href="https://drive.google.com/file/d/18I6H7UIOVsPKhGswya6xvjbHEubzf81g/view?usp=sharing"
+        class="btn"
+        download
+        target="_blank"
+        >Read Full Terms</a
+      >
 
-    <section class="features">
-      <div class="features-grid">
-        <div class="feature-item">
-          <span>💰</span>
-          <h4>Promo Pricing</h4>
-          <p>Special rates for our valued customers</p>
-        </div>
-        <div class="feature-item">
-          <span>🚫</span>
-          <h4>What's Not Included</h4>
-          <p>Clear transparency on service scope</p>
-        </div>
-        <div class="feature-item">
-          <span>⚡</span>
-          <h4>Same-Day Service</h4>
-          <p>Priority handling for urgent needs</p>
-        </div>
-        <div class="feature-item">
-          <span>🛡️</span>
-          <h4>Community Fridays</h4>
-          <p>Special services for our community</p>
-        </div>
-        <div class="feature-item">
-          <span>✅</span>
-          <h4>Warranty</h4>
-          <p>Guaranteed quality and satisfaction</p>
-        </div>
-        <div class="feature-item">
-          <span>📅</span>
-          <h4>Rescheduling</h4>
-          <p>Flexible appointment management</p>
-        </div>
-        <div class="feature-item">
-          <span>🚫</span>
-          <h4>Refusals</h4>
-          <p>Clear policy on service limitations</p>
-        </div>
-        <div class="feature-item">
-          <span>💳</span>
-          <h4>Payments</h4>
-          <p>Secure and convenient options</p>
-        </div>
-        <div class="feature-item">
-          <span>🔄</span>
-          <h4>Cancellations</h4>
-          <p>Fair and transparent policy</p>
-        </div>
+      <div class="features">
+        <h3>Transparent. Fair. Straightforward.</h3>
+        <div class="feature-item"><span>💰</span> Promo Pricing</div>
+        <div class="feature-item"><span>🚫</span> What's Not Included</div>
+        <div class="feature-item"><span>⚡</span> Same-Day & Priority</div>
+        <div class="feature-item"><span>🛡️</span> Community Fridays</div>
+        <div class="feature-item"><span>✅</span> Warranty</div>
+        <div class="feature-item"><span>📅</span> Rescheduling</div>
+        <div class="feature-item"><span>🚫</span> Refusals</div>
+        <div class="feature-item"><span>💳</span> Payments</div>
+        <div class="feature-item"><span>🔄</span> Cancellations</div>
       </div>
-    </section>
 
-    <section class="cta-section">
-      <div class="container-buttons">
-        <a href="#" class="btn-outline">View Terms & Conditions (PDF)</a>
-        <a href="#" class="btn">Read Online (HTML)</a>
+      <div class="button-group">
+        <a
+          href="https://drive.google.com/file/d/18I6H7UIOVsPKhGswya6xvjbHEubzf81g/view?usp=sharing"
+          class="btn-outline"
+          download
+          target="_blank"
+          >View Terms & Conditions (PDF)</a
+        >
+        <a
+          href="https://drive.google.com/file/d/18I6H7UIOVsPKhGswya6xvjbHEubzf81g/view?usp=sharing"
+          class="btn"
+          download
+          target="_blank"
+          >Read Online (HTML)</a
+        >
       </div>
-    </section>
+    </div>
   </body>
 </html>
