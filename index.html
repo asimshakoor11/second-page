@@ -143,6 +143,14 @@
         padding: 1.5rem;
         border-radius: 8px;
         transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .features-inner {
+        width: 200px;
       }
 
       .features:hover {
@@ -157,9 +165,6 @@
         margin-bottom: 1rem;
         font-family: "Montserrat", sans-serif;
         position: relative;
-        display: inline-block;
-        left: 50%;
-        transform: translateX(-50%);
       }
 
       .features h3::after {
@@ -245,17 +250,6 @@
           padding: 0;
         }
 
-        .features{
-          display: flex;
-          flex-direction: column ;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .features-inner{
-          width: 200px;
-        }
-
         .features:hover {
           transform: translateY(1px);
           box-shadow: none;
@@ -284,14 +278,15 @@
   <body>
     <div class="container">
       <div class="title">
-        📄 KAS PROS Service Pricing, Warranty, Promotions & Installation Terms
+        📄 KAS PROS Pricing, Warranty, Promotions, Repair & Installation
+        Terms & Conditions
       </div>
       <div class="subtitle">
         Everything you need to know about how we price, protect, and deliver our
         services – all in one place.
       </div>
       <a
-        href="https://drive.google.com/file/d/1nTEF8V9gu5WDYK1jSxfD3xKt1zfS2LvV/view"
+        href="kas-pros.pdf"
         class="btn"
         download
         target="_blank"
@@ -315,14 +310,14 @@
 
       <div class="button-group">
         <a
-          href="https://drive.google.com/file/d/1nTEF8V9gu5WDYK1jSxfD3xKt1zfS2LvV/view"
+          href="kas-pros.pdf"
           class="btn-outline"
           download
           target="_blank"
           >View Terms & Conditions (PDF)</a
         >
         <a
-          href="https://drive.google.com/file/d/1nTEF8V9gu5WDYK1jSxfD3xKt1zfS2LvV/view"
+          href="kas-pros.pdf"
           class="btn"
           download
           target="_blank"
